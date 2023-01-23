@@ -76,10 +76,14 @@ The hardware or device component in IoT refers to the physical objects embedded 
 
 We use ESP32 based hardware for Magicblocks.io. ESP32 is a powerful and versatile microcontroller that is well-suited for IoT projects. Its combination of low cost, small form factor, and built-in wireless capabilities make it an ideal choice for a wide range of applications. And the availability of development boards makes it easy for developers to prototype and test their ideas.
 Using ESP32 for IoT projects is a great choice for several reasons:
-•	It is low cost, yet powerful enough for many IoT applications.
-•	It has built-in wireless capabilities, eliminating the need for separate modules.
-•	It has a small form factor, making it easy to integrate into a variety of devices.
-•	It has a large and active community of developers, providing a wealth of resources and support.
+
+* It is low cost, yet powerful enough for many IoT applications.
+* It has built-in wireless capabilities, eliminating the need for separate modules.
+* It has a small form factor, making it easy to integrate into a variety of devices.
+* It has a large and active community of developers, providing a wealth of resources and support.
+
+.. image:: Images/device-choice.png
+    :width: 600px
 
 ESP32 Dev Kit 
 =============
@@ -89,13 +93,16 @@ Magicbit
 ========
 Magicbit is an ESP32-based development board that features in-built battery charger, WiFi & Bluetooth connectivity, integrated sensors and actuators, an internal OLED display, and a plug & play feature for easy connection of accessories, enabling users to easily test and design projects.
 
+MagicKey
+========
+MagicKey is a breadboard compatible ESP32 based development board with on board LED, push button, LDR and RGB neo pixel. It support all software as same as Magicbit.
+
 M5 Stack
 ========
 
 M5Stack is a line of modular, stackable, and portable development boards based on the ESP32 microcontroller, which are often used for IoT projects and also include additional modules for more functionality.
 
-.. image:: Images/device-choice.png
-    :width: 600px 
+ 
 
 ***************
 Getting Started
