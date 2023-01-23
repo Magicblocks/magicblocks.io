@@ -1,16 +1,9 @@
-.. tabs::
+this is some text
 
-   .. tab:: Apples
+*  this is a list item
+*  another item
 
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
+more text
       
 .. dropdown:: Dropdown title
    Dropdown content
@@ -122,7 +115,7 @@ Create Magicblocks.io Account
 
 - Select SIGNUP
 
-.. image:: Images/landing page.png
+.. image:: Images/landingpage.png
 
 - Click on the SIGNUP button after inserted your details
 
