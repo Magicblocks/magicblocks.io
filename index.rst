@@ -29,6 +29,9 @@
 
 
 .. contents:: 
+
+
+       
     
 *****************************************************
 What is Internet of Things
@@ -118,7 +121,8 @@ Create Magicblocks.io Account
 
 
 - Select SIGNUP
-.. image:: Images/landing%20page.png
+
+.. image:: Images/landing page.png
 
 - Click on the SIGNUP button after inserted your details
 
@@ -228,29 +232,6 @@ Setting up a device
         On next stage configure the device using USB method. If it didn’t work you can retry again or use WIFi option to configure device. You will get a message after the successful configuration.
 
         .. image:: Images/configure-wifi-ESP32.jpg
-
-
-
-
-Connect your device to computer using USB cable.
-
-.. image:: Images/usb-plugging-magicbit-core.jpg
-
-click on the setting icon on device manager of your device.
-
-.. image:: Images/magicblocks-device-setup.jpg
-
-Select your device and follow instructions to load magicblocks.io firmware.
-
-.. image:: Images/select-device.jpg
-
-On next window enter your internet router WiFi network name (SSID) and password
-
-.. image:: Images/setup-wifi-network.jpg
-
-On next stage configure the device using USB method. If it didn’t work you can retry again or use WIFi option to configure device. You will get a message after the successful configuration.
-
-.. image:: Images/configure-wifi.jpg
 
 
 
