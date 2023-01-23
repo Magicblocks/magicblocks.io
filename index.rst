@@ -20,10 +20,16 @@
       
 .. image:: Images/magicblocks-device-setup.jpg
     :class: with-border with-shadow
-    :width: 400px      
+    :width: 400px     
+
+.. image:: https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg
+    :alt: Getting Started
+    :target: https://www.youtube.com/watch?v=p4vSKwN1cfI 
+    :width: 400px
 
 
-
+.. contents:: 
+    
 *****************************************************
 What is Internet of Things
 *****************************************************
@@ -92,7 +98,8 @@ M5 Stack
 
 M5Stack is a line of modular, stackable, and portable development boards based on the ESP32 microcontroller, which are often used for IoT projects and also include additional modules for more functionality.
 
-
+.. image:: Images/device-choice.png
+    :width: 600px 
 
 ***************
 Getting Started
@@ -103,9 +110,6 @@ Getting Started
 
 `Watch Video <https://www.youtube.com/watch?v=p4vSKwN1cfI>`_
 
-.. image:: https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg
-    :alt: Getting Started
-    :target: https://www.youtube.com/watch?v=p4vSKwN1cfI
 
 Create Magicblocks.io Account
 ===========================================
@@ -196,7 +200,7 @@ Setting up a device
 
         On next window enter your internet router WiFi network name (SSID) and password
 
-        .. image:: Images/setup-wifi-network.jpg
+        .. image:: Images/setup-wifi-network-magickey.jpg
 
         On next stage configure the device using USB method. If it didn’t work you can retry again or use WIFi option to configure device. You will get a message after the successful configuration.
 
@@ -219,7 +223,7 @@ Setting up a device
 
         On next window enter your internet router WiFi network name (SSID) and password
 
-        .. image:: Images/setup-wifi-network.jpg
+        .. image:: Images/setup-wifi-network-esp32.jpg
 
         On next stage configure the device using USB method. If it didn’t work you can retry again or use WIFi option to configure device. You will get a message after the successful configuration.
 
