@@ -1,6 +1,6 @@
 this is some text
 
-*  this is a list item
+*  this is a list itm
 *  another item
 
 more text
