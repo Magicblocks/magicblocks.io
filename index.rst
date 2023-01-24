@@ -301,7 +301,17 @@ This block set enables you to control individual pins of the device from the pla
 How Configure Blocks
 ======================
 
-Every block has a property called Device ID where you need to specify to which device this block belongs to. This is important because you will be working with multiple devices in a typical IoT project. You can find device ID from magicblocks device manager.
+The first property to configure in any node is its name. By providing a name for the block, it can be easily identified among the other blocks in the flow. However; setting the name is optional and it doesn't affect the operation of the node.
+
+Every block that interact with your Magicbit has a property called Device ID where you need to specify to which device this block belongs to. This is important because you will be working with multiple devices in a typical IoT project. You can find device ID from magicblocks device manager.
+
+For most nodes that interact with the Magicbit, a PIN has to be specified. This let's the Magicbit know which pin the device you intend to use is connected to.
+
+Other than these, different blocks may have additional properties depending on which parameters are required to be specified to achieve the intended outcome from the device.
+
+.. image:: Images/node-config.jpg
+    :width: 800px 
+
 
 Digital Out
 -----------
@@ -336,10 +346,9 @@ Input status can be passed to a another block or viewed on the debug window.
 - Output
     - Value of the pin as 1 or 0 in the following format and the pin number as the topic
 
+
 Analog Out
 ----------
-
-
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/analogOut.PNG?raw=true
 
 This block used to set PWM to pins of Magicbit. Value should be in range of 0-255. Inject block or output of a another block can be used to set the value.
@@ -350,6 +359,7 @@ This block used to set PWM to pins of Magicbit. Value should be in range of 0-25
 
 - Input
     - Inject block or any block. Input value should be in range of 0-255
+
 
 Analog In
 ---------
@@ -377,7 +387,7 @@ This block will read analog value of the ADC pin of the module. Similar to the d
 Servo
 ---------
 
-.. image:: https://github.com/magicbitlk/magicblocks/blob/63dfa1293534a211290852c2194c2a50b02fcc83/Images/Magicblocks%20servo.png
+.. image:: Images/servo_magicblocks.png
 
 
 This block will take an input between 0 and 180, and set the servo angle to that position in degrees. 
@@ -389,6 +399,149 @@ This block will take an input between 0 and 180, and set the servo angle to that
 
 - Input
     - Integer between 0 and 180.
+
+
+Display
+---------
+
+.. image:: Images/display-magicblocks.jpg
+
+
+This block will take a text input and display it on the Magicbit's OLED display.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Font Size: The font size of the text to be displayed (between 1 to 5)
+
+- Input
+    - String 
+
+
+Buzzer
+---------
+
+.. image:: Images/buzzer-magicblocks.jpg
+
+
+This block will take an input pulse and play a tone for a preset amount of time.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Frequency: Frequency of the tone to be played (between 20 Hz and 20 kHz)
+    - Duration: How long the tone should be played
+
+- Input
+    - Any input trigger pulse 
+
+
+Motor
+---------
+
+.. image:: Images/motor-magicblocks.jpg
+
+This block will take an input value for msg.payload which is between -100 and 100 and turn the selected motor Foward or Backwards in the given speed.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Motor: Select which motor (motor 1 or motor 2) needs to be controlled by the node
+
+- Input
+    - Integer between -100 and 100 for msg.payload
+
+
+DHT11
+---------
+
+.. image:: Images/dht11-magicblocks.jpg
+
+The DHT11 node can be used to output the temperature and the humidity of the surrounding environment when its triggered by an input pulse. 
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Pin: Select the Pin to which the sensor is connected from drop down list
+    - Mode: Configure the block to output Temperature only, humidity only or both temperature and humidity together in the same message.
+
+- Input
+    - Any input trigger pulse
+
+- Output
+    - 
+
+
+NeoPixel
+---------
+
+.. image:: Images/neopixel-magicblocks.jpg
+
+This block will take an array of input with RGB values, to control a series of NeoPixel LEDs. 
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Pin: Select the Pin to which the NeoPixel LED series is connected from drop down list
+
+- Input
+    - For n number of LEDs, input msg.payload [[R1,G1,B1],[R2,G2,B2].....[Rn,Gn,Bn]] Where R,G,B (between 0 to 255) values are the intensities of Red, Green and Blue colors respectively. 
+
+
+Ultrasonic
+------------
+
+.. image:: Images/ultrasonic-magicblocks.jpg
+
+This block will output the distance to an obstacle in centimeters when an input trigger pulse is given.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+
+- Input
+    - Any input trigger pulse
+
+- Output
+    - Integer distance to an obstacle in centimeters
+
+
+IR Read
+------------
+
+.. image:: Images/ir-read-magicblocks.jpg
+
+This block will read IR signal using when triggered and save it locally in the  FLASH memory of the Magicbit. Two different IR commands can be stored in two memory banks.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Pin: Select the Pin to which the sensor is connected from drop down list
+    - Command: Select which bank (1 or 2) the IR command should be saved to
+
+- Input
+    - Any input trigger pulse
+
+- Output
+    - When an IR command is saved, the node will output msg.payload as { ir_recv: 1 , ir_bank: 2 }
+
+
+IR Send
+------------
+
+.. image:: Images/ir-send-magicblocks.jpg
+
+This block will transmit IR signal when triggered using the IR transmitter. Two different IR commands can be saved and transmitted.
+
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
+    - Pin: Select the Pin to which the sensor is connected from drop down list
+    - Command: Select which bank (1 or 2) the IR command should be saved to
+
+- Input
+    - Any input trigger pulse
+
 
 *************************
 Playground 
