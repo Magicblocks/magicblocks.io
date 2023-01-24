@@ -1,24 +1,24 @@
-this is some text
+You can turn parallel sections to tabs in `html_document` output.
 
--   this is a list itm
--   another item
+## Results {.tabset}
 
-more text
+### Plots
 
-::: {.dropdown}
-Dropdown title Dropdown content
-:::
+We show a scatter plot in this section.
 
-```{=html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe>}
+```{r, fig.dim=c(5, 3)}
+par(mar = c(4, 4, .5, .1))
+plot(mpg ~ hp, data = mtcars, pch = 19)
 ```
-![image](Images/magicblocks-device-setup.jpg){.with-border .with-shadow
-.with-border .with-shadow width="400px"}
 
-[![Getting Started](https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg){width="400px"}](https://www.youtube.com/watch?v=p4vSKwN1cfI)
+### Tables
 
-::: {.contents}
-:::
+We show the data in this tab.
+
+
+```{r}
+head(mtcars)
+```
 
 What is Internet of Things
 ==========================
@@ -228,8 +228,10 @@ Click save changes to finish.
 Setting up a device
 -------------------
 
-::: {.tabs}
-::: {.tab}
+## Results {.tabset}
+
+### Plots 
+
 Magicbit
 
 Connect your device to computer using USB cable.

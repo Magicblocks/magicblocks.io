@@ -1,27 +1,28 @@
-this is some text
 
-*  this is a list itm
-*  another item
+.. this is some text
 
-more text
+.. *  this is a list itm
+.. *  another item
+
+.. more text
       
-.. dropdown:: Dropdown title
-   Dropdown content
+.. .. dropdown:: Dropdown title
+..    Dropdown content
 
-.. raw:: html
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe>
+.. .. raw:: html
+..        <iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe>
       
-.. image:: Images/magicblocks-device-setup.jpg
-    :class: with-border with-shadow
-    :width: 400px     
+.. .. image:: Images/magicblocks-device-setup.jpg
+..     :class: with-border with-shadow
+..     :width: 400px     
 
-.. image:: https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg
-    :alt: Getting Started
-    :target: https://www.youtube.com/watch?v=p4vSKwN1cfI 
-    :width: 400px
+.. .. image:: https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg
+..     :alt: Getting Started
+..     :target: https://www.youtube.com/watch?v=p4vSKwN1cfI 
+..     :width: 400px
 
 
-.. contents:: 
+
 
 
        
@@ -279,21 +280,21 @@ Magicbit Blocks
 
 Following Blocks are available.
  
--  Digital Out
--  Digital In
--  Analog Out/PWM
--  Analog In
--  Serial Tx
--  Serial Rx
--  Servo
--  Display
--  Buzzer
--  Motor
--  DHT11
--  NeoPixel
--  Ultrasonic
--  IR Read
--  IR Send
+• Digital Out
+• Digital In
+• Analog Out/PWM
+• Analog In
+• Serial Tx
+• Serial Rx
+• Servo
+• Display
+• Buzzer
+• Motor
+• DHT11
+• NeoPixel
+• Ultrasonic
+• IR Read
+• IR Send
 
 This block set enables you to control individual pins of the device from the playground. The functionality of each block is described below:
 
