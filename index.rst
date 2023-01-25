@@ -259,7 +259,79 @@ Go to the playground!
 Your first IoT project
 ***********************
 
-Let's start magic with controlling LED over the internet
+Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
+
+
+.. tabs::
+
+    .. tab:: Magicbit
+
+    Let’s start magic with displaying a text on Magicbit display.
+
+       - Open the Device Manager in your magicblocks account
+       - Plug in your Magicbit that was setup in the previous section and wait for it to connect
+       - Open the playground
+       - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
+        .. image:: Images/frist_iot_magicbit_1.jpg      
+
+       - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
+       - Double click on the Display block and Select the device Id
+        .. image:: Images/frist_iot_magicbit_2.jpg
+
+       - Click deploy
+       - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
+
+
+    .. tab:: MagicKey
+
+
+    Let’s start magic with displaying a text on Magicbit display.
+
+        - Open the Device Manager in your magicblocks account
+        - Plug in your MagicKey that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
+
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2.jpg  
+
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
+
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
+
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+  
+    .. tab:: Generic ESP32
+
+    Open the Device Manager in your magicblocks account
+
+        - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
+        - Goto the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
+
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2_esp32.jpg  
+
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
+
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
+
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+
+
+
 
 Open the Device Manager in your magicblocks account
 
