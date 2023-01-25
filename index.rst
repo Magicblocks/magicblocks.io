@@ -333,21 +333,21 @@ Let's start magic with by controlling your device over the internet! Select your
 
 
 
-Open the Device Manager in your magicblocks account
+.. Open the Device Manager in your magicblocks account
 
-- Turn on your ESP32 board that was setup in the previous section and wait for it to connect
-- Goto the playground
-- Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-- Double click on the block and select device ID
-- Set LED connected pin (16 in Magicbit / 2 in ESP32 Dev kit)
-- Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-- In one **inject** node set payload type as Number and set value to 0
-- In Other **inject** node set payload type as Number and set value to 1 
-- Click deploy
-- Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+.. - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
+.. - Goto the playground
+.. - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+.. - Double click on the block and select device ID
+.. - Set LED connected pin (16 in Magicbit / 2 in ESP32 Dev kit)
+.. - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+.. - In one **inject** node set payload type as Number and set value to 0
+.. - In Other **inject** node set payload type as Number and set value to 1 
+.. - Click deploy
+.. - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
 
-Watch on Youtube
-https://www.youtube.com/watch?v=6y6Ieq8vZbo
+.. Watch on Youtube
+.. https://www.youtube.com/watch?v=6y6Ieq8vZbo
 
 
 
@@ -391,7 +391,7 @@ For most nodes that interact with the Magicbit, a PIN has to be specified. This 
 Other than these, different blocks may have additional properties depending on which parameters are required to be specified to achieve the intended outcome from the device.
 
 .. image:: Images/node-config.jpg
-    :width: 800px 
+    :width: 400px 
 
 
 Digital Out
@@ -481,6 +481,17 @@ This block will take an input between 0 and 180, and set the servo angle to that
 - Input
     - Integer between 0 and 180.
 
+- Connection 
+    - Magicbit 
+    .. image:: Images/servo_connect_magicbit.jpg
+
+    .. - MagicKey 
+    .. .. image:: Images/servo_connect_magicbit.jpg
+
+    - Generic ESP32
+    .. image:: Images/servo_connect_esp32.jpg
+  
+
 
 Display
 ---------
@@ -498,6 +509,8 @@ This block will take a text input and display it on the Magicbit's OLED display.
 - Input
     - String 
 
+- Connection for Generic ESP32
+.. image:: Images/oled_esp32.jpg
 
 Buzzer
 ---------
@@ -516,6 +529,8 @@ This block will take an input pulse and play a tone for a preset amount of time.
 - Input
     - Any input trigger pulse 
 
+- Connection for Generic ESP32
+.. image:: Images/buzzer_connect_esp32.jpg
 
 Motor
 ---------
@@ -531,6 +546,14 @@ This block will take an input value for msg.payload which is between -100 and 10
 
 - Input
     - Integer between -100 and 100 for msg.payload
+
+- Connection 
+  - Magicbit
+  .. image:: Images/motor_connect_magicbit.jpg
+
+  - Generic ESP32
+  .. image:: Images/motor_connect_esp32.jpg
+  
 
 
 DHT11
@@ -550,7 +573,13 @@ The DHT11 node can be used to output the temperature and the humidity of the sur
     - Any input trigger pulse
 
 - Output
-    - 
+
+- Connection 
+  - Magicbit
+  .. image:: Images/dht11_connect_magicbit.png
+
+  - Generic ESP32
+  .. image:: Images/dht11_connect_esp32.jpg
 
 
 NeoPixel
@@ -568,6 +597,12 @@ This block will take an array of input with RGB values, to control a series of N
 - Input
     - For n number of LEDs, input msg.payload [[R1,G1,B1],[R2,G2,B2].....[Rn,Gn,Bn]] Where R,G,B (between 0 to 255) values are the intensities of Red, Green and Blue colors respectively. 
 
+- Connection 
+  - Magicbit
+  .. image:: Images/neopixel_connect_magicbit.jpg
+
+  - Generic ESP32
+  .. image:: Images/neopixel_connect_esp32.jpg
 
 Ultrasonic
 ------------
@@ -586,6 +621,12 @@ This block will output the distance to an obstacle in centimeters when an input 
 - Output
     - Integer distance to an obstacle in centimeters
 
+- Connection 
+  - Magicbit
+  .. image:: Images/ultrasonic_connect_esp32.jpg
+
+  - Generic ESP32
+  .. image:: Images/ultrasonic_connect_magicbit.jpg
 
 IR Read
 ------------
@@ -606,6 +647,12 @@ This block will read IR signal using when triggered and save it locally in the  
 - Output
     - When an IR command is saved, the node will output msg.payload as { ir_recv: 1 , ir_bank: 2 }
 
+- Connection 
+  - Magicbit
+  .. image:: Images/ir_read_connect_magicbit.jpg
+
+  - Generic ESP32
+  .. image:: Images/ir_read_connect_esp32.jpg
 
 IR Send
 ------------
@@ -623,6 +670,13 @@ This block will transmit IR signal when triggered using the IR transmitter. Two 
 - Input
     - Any input trigger pulse
 
+- Connection 
+  - Magicbit
+  .. image:: Images/ir_send_connect_magicbit.jpg
+
+  - Generic ESP32
+  .. image:: Images/ir_send_connect_esp32.jpg
+    The transmission range can be improved by connecting the IR emitter through a transistor. 
 
 *************************
 Playground 
