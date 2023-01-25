@@ -21,8 +21,13 @@
 ..     :target: https://www.youtube.com/watch?v=p4vSKwN1cfI 
 ..     :width: 400px
 
+.. line for setup device
 
+.. first iot project ss
 
+.. buzzer
+.. display
+.. neo pixel
 
 
        
@@ -144,6 +149,7 @@ Login to Your Magicblocks.io Account
 - Enter your email address and the Magicblocks Password and sign in to magicblocks
 .. image:: Images/login.png
 
+
 Start the Playground
 =====================================
 
@@ -151,6 +157,7 @@ The playground is the visual programming environment based on Node-Red that has 
 
 .. image:: Images/portal.png
 .. image:: Images/subscription.png
+
 
 Create a new device
 =====================================
@@ -163,7 +170,8 @@ Go to Device Manager and add a new device. Select your **device type**  & keep t
 Setting up a device
 ====================
     
-        
+To set up your device, follow the relevant steps for your device given below. 
+
 .. tabs::
 
     .. tab:: Magicbit
@@ -247,13 +255,14 @@ Go to the playground!
 
 .. image:: Images/blankplayground.PNG
 
-**********
+***********************
 Your first IoT project
-**********
+***********************
 
 Let's start magic with controlling LED over the internet
 
- Open the Device Manager in your magicblocks account
+Open the Device Manager in your magicblocks account
+
 - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
 - Goto the playground
 - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
@@ -278,23 +287,23 @@ Magicbit Blocks
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/magicbitNodes.PNG?raw=true
 
-Following Blocks are available.
+.. Following Blocks are available.
  
-• Digital Out
-• Digital In
-• Analog Out/PWM
-• Analog In
-• Serial Tx
-• Serial Rx
-• Servo
-• Display
-• Buzzer
-• Motor
-• DHT11
-• NeoPixel
-• Ultrasonic
-• IR Read
-• IR Send
+.. • Digital Out
+.. • Digital In
+.. • Analog Out/PWM
+.. • Analog In
+.. • Serial Tx
+.. • Serial Rx
+.. • Servo
+.. • Display
+.. • Buzzer
+.. • Motor
+.. • DHT11
+.. • NeoPixel
+.. • Ultrasonic
+.. • IR Read
+.. • IR Send
 
 This block set enables you to control individual pins of the device from the playground. The functionality of each block is described below:
 
