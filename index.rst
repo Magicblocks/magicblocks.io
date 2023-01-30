@@ -211,6 +211,9 @@ To set up your device, follow the relevant steps for your device given below.
         .. image:: Images/configure-wifi-ESP32.jpg
 
 
+*************************
+Playground 
+*************************
 
 Go to the playground!
 =======================
@@ -223,106 +226,125 @@ Go to the playground!
 
 .. image:: Images/blankplayground.PNG
 
-***********************
-Your first IoT project
-***********************
 
-Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
+.. .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/3-1024x576.jpg?raw=true
 
-.. tabs::
+The editor window consists of four components:
 
-    .. tab:: Magicbit
+- The header at the top, containing the deploy button, main menu, and, if user authentication is enabled, the user menu.
+- The palette on the left, containing the nodes available to use.
+- The main workspace in the middle, where flows are created.
+- The sidebar on the right.
 
-        Let’s start magic with displaying a text on Magicbit display.
+.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-default-components-1024x683.png?raw=true
 
-        - Open the Device Manager in your magicblocks account
-        - Plug in your Magicbit that was setup in the previous section and wait for it to connect
-        - Open the playground
-        - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
-            .. image:: Images/frist_iot_magicbit_1.jpg      
+The main workspace is where flows are developed by dragging nodes from the palette and wiring them together.
+The workspace has a row of tabs along the top; one for each flow and any subflows that have been opened.
 
-        - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
-        - Double click on the Display block and Select the device Id
-            .. image:: Images/frist_iot_magicbit_2.jpg
 
-        - Click deploy
-        - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
+Flow
+====
 
-        
-    .. tab:: MagicKey
+.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-flow-tabs.png?raw=true
 
-        Let’s start magic with displaying a text on Magicbit display.
 
-        - Open the Device Manager in your magicblocks account
-        - Plug in your MagicKey that was setup in the previous section and wait for it to connect
-        - Open the playground
-        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-        .. image:: Images/frist_iot_LED_1.jpg        
+Adding a flow
+-------------
 
-        - Double click on the **Digital Out** block and select device ID
-        - Set LED connected pin (Pin 16 in MagicKey)
-        .. image:: Images/frist_iot_LED_2.jpg  
+.. |plus_icon| image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/plus.png?raw=true
+    :width: 12px
 
-        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-        .. image:: Images/frist_iot_LED_3.jpg
+To add a new flow, click the  |plus_icon|  button in the top bar.
 
-        - In one **inject** node set payload type as Number and set value to 0
-        - In Other **inject** node set payload type as Number and set value to 1 
-        .. image:: Images/frist_iot_LED_4.jpg
 
-        - Click deploy
-        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
-  
+Nodes
+======
+Nodes can be added to the workspace by either:
 
-    .. tab:: Generic ESP32
 
-        Open the Device Manager in your magicblocks account
+- Dragging them from the palette
+- Using the quick-add dialog
+- Importing from the library or clipboard
 
-        - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
-        - Goto the playground
-        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-        .. image:: Images/frist_iot_LED_1.jpg        
+Nodes are joined together by wires via their ports. A node can have at most one input port and many output ports. A port may have a label that is displayed when the mouse hovers over it. A node may specify labels, for example, the Switch node shows the rule that matches the port. The labels can also be customised in the node edit dialog.
 
-        - Double click on the **Digital Out** block and select device ID
-        - Set LED connected pin (Pin 16 in MagicKey)
-        .. image:: Images/frist_iot_LED_2_esp32.jpg  
+.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-port-label.png?raw=true
 
-        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-        .. image:: Images/frist_iot_LED_3.jpg
 
-        - In one **inject** node set payload type as Number and set value to 0
-        - In Other **inject** node set payload type as Number and set value to 1 
-        .. image:: Images/frist_iot_LED_4.jpg
+Some nodes display a status message and icon below the node. This is used to indicate the runtime state of the node - for example, the MQTT nodes indicate if they are currently connected or not.
 
-        - Click deploy
-        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-details.png?raw=true
+
+
+If a node has any undeployed changes, it displays a blue circle above it. If there are errors with its configuration, it displays a red triangle.
+
+Some nodes include a button on either its left or right edge. These allow some interaction with the node from within the editor. The Inject and Debug nodes are the only core nodes that have buttons.
 
 
 
 
-.. Open the Device Manager in your magicblocks account
+Editing node configuration
+==========================
 
-.. - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
-.. - Goto the playground
-.. - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-.. - Double click on the block and select device ID
-.. - Set LED connected pin (16 in Magicbit / 2 in ESP32 Dev kit)
-.. - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-.. - In one **inject** node set payload type as Number and set value to 0
-.. - In Other **inject** node set payload type as Number and set value to 1 
-.. - Click deploy
-.. - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+A node’s configuration can be edited by double clicking on the node, or pressing **Enter** when the workspace has focus. If multiple nodes are selected, the _first_ node in the selection will be edited.
 
-.. Watch on Youtube
-.. https://www.youtube.com/watch?v=6y6Ieq8vZbo
+Every block that interact with your Magicbit has a property called Device ID where you need to specify to which device this block belongs to. This is important because you will be working with multiple devices in a typical IoT project. You can find device ID from magicblocks device manager.
+
+For most nodes that interact with the Magicbit, a PIN has to be specified. This let's the Magicbit know which pin the device you intend to use is connected to.
+
+Other than these, different blocks may have additional properties depending on which parameters are required to be specified to achieve the intended outcome from the device.
+
+.. image:: Images/node-config.jpg
+    :width: 400px
+    :align: center
+
+.. .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node.png?raw=true
+..     :width: 400px
+
+Wires
+=====
+
+Nodes are wired together by pressing the left-mouse button on a node’s port, dragging to the destination node and releasing the mouse button.
+
+.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-wire.png?raw=true
+
+Alternatively, if the **Ctrl/Command** key is held down, the left-mouse button can be clicked (and released) on a node’s port and then clicked on the destination. If the **Ctrl/Command** key remains held and the just-wired destination node has an output port, a new wire is started from that port. This allows a set of nodes to be quickly wired together.
+
+This can also be combined with the Quick-Add dialog that is triggered by a **Ctrl/Command-Click** on the workspace to quickly insert new nodes and have them already wired to previous nodes in the flow.
 
 
+Import & Export
+===============
 
-If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
+Flows can be imported and exported from the editor using their JSON format, making it very easy to share flows with others.
 
-***************
+Importing flows
+---------------
+
+To import a flow, open the Import dialog, paste in the flow json and click ‘Import’.
+
+The ‘Import’ button will only be active if valid JSON is pasted into the dialog.
+
+The dialog also offers the option to import the nodes into the current flow, or to create a new flow for them.
+
+.. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-import.png?raw=true
+
+
+Exporting flows
+---------------
+
+The Export dialog can be used to copy flow json out of the editor.
+
+It can export either the selected nodes, the current flow (including its tab node) or the complete flow configuration.
+
+It offers the option to export compact or formatted JSON. The compact option generates a single line of JSON with no whitespace. The formatted JSON option is formatted over multiple lines with full indentation - which can be easier to read.
+
+.. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-export.png?raw=true
+
+
+===============
 Magicbit Blocks
-***************
+===============
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/magicbitNodes.PNG?raw=true
 
@@ -346,24 +368,8 @@ Magicbit Blocks
 
 This block set enables you to control individual pins of the device from the playground. The functionality of each block is described below:
 
-How Configure Blocks
-======================
-
-The first property to configure in any node is its name. By providing a name for the block, it can be easily identified among the other blocks in the flow. However; setting the name is optional and it doesn't affect the operation of the node.
-
-Every block that interact with your Magicbit has a property called Device ID where you need to specify to which device this block belongs to. This is important because you will be working with multiple devices in a typical IoT project. You can find device ID from magicblocks device manager.
-
-For most nodes that interact with the Magicbit, a PIN has to be specified. This let's the Magicbit know which pin the device you intend to use is connected to.
-
-Other than these, different blocks may have additional properties depending on which parameters are required to be specified to achieve the intended outcome from the device.
-
-.. image:: Images/node-config.jpg
-    :width: 400px
-    :align: center
-
-
 Digital Out
------------
+------------
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/digitalOut.PNG?raw=true
 
@@ -731,115 +737,85 @@ Import the already setup blocks below to try out the function of the IR Read blo
 
 The transmission range can be improved by connecting the IR emitter through a transistor. 
 
-*************************
-Playground 
-*************************
+***********************
+Your first IoT project
+***********************
 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/3-1024x576.jpg?raw=true
+Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
 
-The editor window consists of four components:
+.. tabs::
 
-- The header at the top, containing the deploy button, main menu, and, if user authentication is enabled, the user menu.
-- The palette on the left, containing the nodes available to use.
-- The main workspace in the middle, where flows are created.
-- The sidebar on the right.
+    .. tab:: Magicbit
 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-default-components-1024x683.png?raw=true
+        Let’s start magic with displaying a text on Magicbit display.
 
-The main workspace is where flows are developed by dragging nodes from the palette and wiring them together.
-The workspace has a row of tabs along the top; one for each flow and any subflows that have been opened.
+        - Open the Device Manager in your magicblocks account
+        - Plug in your Magicbit that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
+            .. image:: Images/frist_iot_magicbit_1.jpg      
 
+        - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
+        - Double click on the Display block and Select the device Id
+            .. image:: Images/frist_iot_magicbit_2.jpg
 
-Flow
-====
+        - Click deploy
+        - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-flow-tabs.png?raw=true
+        
+    .. tab:: MagicKey
 
+        Let’s start magic with displaying a text on Magicbit display.
 
-Adding a flow
--------------
+        - Open the Device Manager in your magicblocks account
+        - Plug in your MagicKey that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
 
-.. |plus_icon| image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/plus.png?raw=true
-    :width: 12px
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2.jpg  
 
-To add a new flow, click the  |plus_icon|  button in the top bar.
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
 
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
 
-Nodes
-======
-Nodes can be added to the workspace by either:
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+  
 
+    .. tab:: Generic ESP32
 
-- Dragging them from the palette
-- Using the quick-add dialog
-- Importing from the library or clipboard
+        Open the Device Manager in your magicblocks account
 
-Nodes are joined together by wires via their ports. A node can have at most one input port and many output ports. A port may have a label that is displayed when the mouse hovers over it. A node may specify labels, for example, the Switch node shows the rule that matches the port. The labels can also be customised in the node edit dialog.
+        - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
+        - Goto the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-port-label.png?raw=true
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2_esp32.jpg  
 
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
 
-Some nodes display a status message and icon below the node. This is used to indicate the runtime state of the node - for example, the MQTT nodes indicate if they are currently connected or not.
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-details.png?raw=true
-
-
-If a node has any undeployed changes, it displays a blue circle above it. If there are errors with its configuration, it displays a red triangle.
-
-Some nodes include a button on either its left or right edge. These allow some interaction with the node from within the editor. The Inject and Debug nodes are the only core nodes that have buttons.
-
-
-
-
-Editing node configuration
-==========================
-
-A node’s configuration can be edited by double clicking on the node, or pressing **Enter** when the workspace has focus. If multiple nodes are selected, the _first_ node in the selection will be edited.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node.png?raw=true
-    :width: 600px
-
-The node edit dialog has two separate sections; properties and settings. The properties section shows the edit form specific to the node type being edited. The settings section shows the common settings that can be set on all nodes. This includes the custom port labels as well as the icon for the node.
-
-Wires
-=====
-
-Nodes are wired together by pressing the left-mouse button on a node’s port, dragging to the destination node and releasing the mouse button.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-node-wire.png?raw=true
-
-Alternatively, if the **Ctrl/Command** key is held down, the left-mouse button can be clicked (and released) on a node’s port and then clicked on the destination. If the **Ctrl/Command** key remains held and the just-wired destination node has an output port, a new wire is started from that port. This allows a set of nodes to be quickly wired together.
-
-This can also be combined with the Quick-Add dialog that is triggered by a **Ctrl/Command-Click** on the workspace to quickly insert new nodes and have them already wired to previous nodes in the flow.
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
 
 
-Import & Export
-===============
-
-Flows can be imported and exported from the editor using their JSON format, making it very easy to share flows with others.
-
-Importing flows
----------------
-
-To import a flow, open the Import dialog, paste in the flow json and click ‘Import’.
-
-The ‘Import’ button will only be active if valid JSON is pasted into the dialog.
-
-The dialog also offers the option to import the nodes into the current flow, or to create a new flow for them.
-
-.. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-import.png?raw=true
+If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
 
 
-Exporting flows
----------------
 
-The Export dialog can be used to copy flow json out of the editor.
-
-It can export either the selected nodes, the current flow (including its tab node) or the complete flow configuration.
-
-It offers the option to export compact or formatted JSON. The compact option generates a single line of JSON with no whitespace. The formatted JSON option is formatted over multiple lines with full indentation - which can be easier to read.
-
-.. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-export.png?raw=true
 
 **********
 Dashboards
