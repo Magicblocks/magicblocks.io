@@ -688,7 +688,7 @@ This block will read IR signal using when triggered and save it locally in the  
 - Connection 
   
   - Magicbit
-  .. image:: Images/ir_read_connect_magicbit.jpg
+  .. image:: Images/ir_read_connect_magicbit.png
 
   - Generic ESP32
   .. image:: Images/ir_read_connect_esp32.jpg
@@ -724,7 +724,7 @@ Import the already setup blocks below to try out the function of the IR Read blo
 - Connection 
   
   - Magicbit
-  .. image:: Images/ir_send_connect_magicbit.jpg
+  .. image:: Images/ir_send_connect_magicbit.png
 
   - Generic ESP32
   .. image:: Images/ir_send_connect_esp32.jpg
