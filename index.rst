@@ -812,24 +812,6 @@ Alternatively, if the **Ctrl/Command** key is held down, the left-mouse button c
 
 This can also be combined with the Quick-Add dialog that is triggered by a **Ctrl/Command-Click** on the workspace to quickly insert new nodes and have them already wired to previous nodes in the flow.
 
-Lasso Tool
-----------
-
-The lasso tool can be used to select multiple nodes. It is enabled by click-dragging on the workspace.
-
-It cannot be used to select a wire.
-
-.. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-workspace-lasso.png?raw=true
-
-
-Selecting all nodes
--------------------
-To select all nodes on the current flow, ensure the workspace has focus and then press **Ctrl/Command-a**.
-
-Editor clipboard
-----------------
-
-The editor supports the standard copy/cut/paste actions. Note they use an internal clipboard rather than the system clipboard.
 
 Import & Export
 ===============
