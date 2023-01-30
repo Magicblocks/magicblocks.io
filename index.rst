@@ -475,11 +475,14 @@ This block will take an input between 0 and 180, and set the servo angle to that
 - Input
     - Integer between 0 and 180.
 
-Import the already setup blocks below to try out the function of the Servo block:::
-..  code-block:: none
-[{"id":"a3277135.4860a","type":"inject","z":"8e70cb96.beec38","name":"","topic":"0","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":240,"wires":[["c4fae3be.28a7b"]]},{"id":"88f7fa5e.ca4808","type":"inject","z":"8e70cb96.beec38","name":"","topic":"90","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["c4fae3be.28a7b"]]},{"id":"e7bdb8d7.7f3a98","type":"inject","z":"8e70cb96.beec38","name":"","topic":"180","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":360,"wires":[["c4fae3be.28a7b"]]},{"id":"c4fae3be.28a7b","type":"Servo","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":350,"y":300,"wires":[]}]
+Import the already setup blocks below to try out the function of the Servo block:
+
+.. code-block:: javascript
+
+    [{"id":"a3277135.4860a","type":"inject","z":"8e70cb96.beec38","name":"","topic":"0","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":240,"wires":[["c4fae3be.28a7b"]]},{"id":"88f7fa5e.ca4808","type":"inject","z":"8e70cb96.beec38","name":"","topic":"90","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["c4fae3be.28a7b"]]},{"id":"e7bdb8d7.7f3a98","type":"inject","z":"8e70cb96.beec38","name":"","topic":"180","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":360,"wires":[["c4fae3be.28a7b"]]},{"id":"c4fae3be.28a7b","type":"Servo","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":350,"y":300,"wires":[]}]
 
 - Connection 
+  
     - Magicbit 
     .. image:: Images/servo_connect_magicbit.jpg
 
@@ -588,6 +591,7 @@ Import the already setup blocks below to try out the function of the DHT11 block
 
 
 - Connection 
+  
   - Magicbit
   .. image:: Images/dht11_connect_magicbit.png
 
