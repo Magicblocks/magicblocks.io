@@ -661,7 +661,7 @@ This block will output the distance to an obstacle in centimeters when an input 
 - Connection 
 
   - Magicbit
-  .. image:: Images/ultrasonic_connect_magicbit.jpg
+  .. image:: Images/ultrasonic_connect_magicbit.png
 
   - Generic ESP32
   .. image:: Images/ultrasonic_connect_esp32.jpg
