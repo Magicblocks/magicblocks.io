@@ -1,4 +1,7 @@
 {
     "esbonio.sphinx.confDir": "",
-    "python.testing.cwd": "${workspaceFolder}"
+    "python.testing.cwd": "${workspaceFolder}",
+    "cSpell.words": [
+        "Magicblocks"
+    ]
 }
