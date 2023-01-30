@@ -2,5 +2,12 @@
     "restructuredtext.builtDocumentationPath" : "${workspaceRoot}/build/html",
     "restructuredtext.confPath"               : "${workspaceFolder}/source",
     "restructuredtext.updateOnTextChanged"    : "true",
-    "restructuredtext.updateDelay"            : 300
+    "restructuredtext.updateDelay"            : 300,
+    
+    "restructuredtext.linter.extraArgs": [
+            "--ignore D001",
+            "--ignore D002",
+            "--ignore D004"
+        ]
+    
  }

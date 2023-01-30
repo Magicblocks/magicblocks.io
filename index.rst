@@ -316,22 +316,6 @@ Let's start magic with by controlling your device over the internet! Select your
 
 
 
-.. tabs::
-
-    .. tab:: Magicbit
-
-        Magicbit text
-
-
-    .. tab:: MagicKey
-        MagicKey text
-
-
-    .. tab:: Generic ESP32
-        Generic ESP32 text
-
-
-
 
 .. Open the Device Manager in your magicblocks account
 
@@ -351,7 +335,7 @@ Let's start magic with by controlling your device over the internet! Select your
 
 
 
-.. info::  If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
+If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
 
 ***************
 Magicbit Blocks
@@ -391,7 +375,8 @@ For most nodes that interact with the Magicbit, a PIN has to be specified. This 
 Other than these, different blocks may have additional properties depending on which parameters are required to be specified to achieve the intended outcome from the device.
 
 .. image:: Images/node-config.jpg
-    :width: 400px 
+    :width: 400px
+    :align: center
 
 
 Digital Out
@@ -491,7 +476,8 @@ This block will take an input between 0 and 180, and set the servo angle to that
     - Integer between 0 and 180.
 
 Import the already setup blocks below to try out the function of the Servo block:::
-    [{"id":"a3277135.4860a","type":"inject","z":"8e70cb96.beec38","name":"","topic":"0","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":240,"wires":[["c4fae3be.28a7b"]]},{"id":"88f7fa5e.ca4808","type":"inject","z":"8e70cb96.beec38","name":"","topic":"90","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["c4fae3be.28a7b"]]},{"id":"e7bdb8d7.7f3a98","type":"inject","z":"8e70cb96.beec38","name":"","topic":"180","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":360,"wires":[["c4fae3be.28a7b"]]},{"id":"c4fae3be.28a7b","type":"Servo","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":350,"y":300,"wires":[]}]
+..  code-block:: none
+[{"id":"a3277135.4860a","type":"inject","z":"8e70cb96.beec38","name":"","topic":"0","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":240,"wires":[["c4fae3be.28a7b"]]},{"id":"88f7fa5e.ca4808","type":"inject","z":"8e70cb96.beec38","name":"","topic":"90","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["c4fae3be.28a7b"]]},{"id":"e7bdb8d7.7f3a98","type":"inject","z":"8e70cb96.beec38","name":"","topic":"180","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":360,"wires":[["c4fae3be.28a7b"]]},{"id":"c4fae3be.28a7b","type":"Servo","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":350,"y":300,"wires":[]}]
 
 - Connection 
     - Magicbit 
