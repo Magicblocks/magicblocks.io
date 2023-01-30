@@ -1,36 +1,5 @@
 
-.. this is some text
-
-.. *  this is a list itm
-.. *  another item
-
-.. more text
       
-.. .. dropdown:: Dropdown title
-..    Dropdown content
-
-.. .. raw:: html
-..        <iframe width="560" height="315" src="https://www.youtube.com/embed/UaIvrDWrIWM" frameborder="0" allowfullscreen></iframe>
-      
-.. .. image:: Images/magicblocks-device-setup.jpg
-..     :class: with-border with-shadow
-..     :width: 400px     
-
-.. .. image:: https://img.youtube.com/vi/p4vSKwN1cfI/maxresdefault.jpg
-..     :alt: Getting Started
-..     :target: https://www.youtube.com/watch?v=p4vSKwN1cfI 
-..     :width: 400px
-
-.. line for setup device
-
-.. first iot project ss
-
-.. buzzer
-.. display
-.. neo pixel
-
-
-       
     
 *****************************************************
 What is Internet of Things
@@ -69,11 +38,11 @@ Magicblocks.io Dashboard
 In Magicblocks you can also create Web based-dashboards attractively for your IoT designs without any codes. 
 You need to connect the necessary widgets to the dashboard that you want and to configure the settings you need to reach them. 
 Then, you can access your Online Dashboard from the dashboard menu on your dashboard, where you can click on the URL in the browser to access the Dashboard via any Device Device such as Smart Phone, Tablet, PC.
-Any ioT creation you want to connect with nodes without any coding and your project running in the cloud platform the development board you use will not have much memory or more processing capability, unless you want to create Image Processing, Character Recognizing, DB Handling, you can create any project on it.
+Any ioT creation you want toe connect with nodes without any coding and your project running in the cloud platform the development board you use will not have much memory or more processing capability, unless you want to create Image Processing, Character Recognizing, DB Handling, you can create any project on it.
 
 You can also create attractively online dashboards online without any coding
 
-.. image:: Images/dashboarde.png
+.. image:: Images/dashboard1.png
 
 ****************
 Hardware
@@ -261,31 +230,29 @@ Your first IoT project
 
 Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
 
-
 .. tabs::
 
     .. tab:: Magicbit
 
-    Let’s start magic with displaying a text on Magicbit display.
+        Let’s start magic with displaying a text on Magicbit display.
 
-       - Open the Device Manager in your magicblocks account
-       - Plug in your Magicbit that was setup in the previous section and wait for it to connect
-       - Open the playground
-       - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
-        .. image:: Images/frist_iot_magicbit_1.jpg      
+        - Open the Device Manager in your magicblocks account
+        - Plug in your Magicbit that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
+            .. image:: Images/frist_iot_magicbit_1.jpg      
 
-       - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
-       - Double click on the Display block and Select the device Id
-        .. image:: Images/frist_iot_magicbit_2.jpg
+        - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
+        - Double click on the Display block and Select the device Id
+            .. image:: Images/frist_iot_magicbit_2.jpg
 
-       - Click deploy
-       - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
+        - Click deploy
+        - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
 
-
+        
     .. tab:: MagicKey
 
-
-    Let’s start magic with displaying a text on Magicbit display.
+        Let’s start magic with displaying a text on Magicbit display.
 
         - Open the Device Manager in your magicblocks account
         - Plug in your MagicKey that was setup in the previous section and wait for it to connect
@@ -307,9 +274,10 @@ Let's start magic with by controlling your device over the internet! Select your
         - Click deploy
         - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
   
+
     .. tab:: Generic ESP32
 
-    Open the Device Manager in your magicblocks account
+        Open the Device Manager in your magicblocks account
 
         - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
         - Goto the playground
@@ -329,6 +297,22 @@ Let's start magic with by controlling your device over the internet! Select your
 
         - Click deploy
         - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+
+
+
+.. tabs::
+
+    .. tab:: Magicbit
+
+        Magicbit text
+
+
+    .. tab:: MagicKey
+        MagicKey text
+
+
+    .. tab:: Generic ESP32
+        Generic ESP32 text
 
 
 
@@ -953,7 +937,7 @@ At the right upper corner of the **Magicblocks** window, you have another tab ca
 Feel free to change the settings, then deploy the changes and see how the UI looks. At the moment you won’t see much difference because you haven’t added anything to the dashboard yet. Those changes will be noticeable when you start adding widgets to the UI.
 
 Creating a User Interface – Example
-==============================
+===================================
 
 In this section we’re going to make a dashboard example to show you how you can build and edit your own dashboard – we won’t actually add functionalities to the widgets – we’ll do that in future projects. This dashboard will have the following features
 
@@ -1020,7 +1004,7 @@ All nodes include documentation you can see in the Info sidebar tab when you sel
 - Template
 
 Inject node
-==========
+============
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/node_inject.png?raw=true
 
@@ -1064,7 +1048,7 @@ A complete guide for using the Function node is `available here <https://nodered
 .
 
 Change node
-==========
+================
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/node_change.png?raw=true
 
