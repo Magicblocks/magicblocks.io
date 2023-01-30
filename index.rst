@@ -392,7 +392,10 @@ This block is used to set a digital output pin to 1 or 0 based on the input. An 
 - Input
     - value to be written to the pin. Accepts 1 (true) or 0 (false) eg: {"payload": 1}
 
-Import the already setup blocks below to try out the function of the Digital Out block:::
+Import the already setup blocks below to try out the function of the Digital Out block:
+
+.. code-block:: javascript
+
     [{"id":"2a06e0c8.00d53","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"0","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":200,"wires":[["19527767.b23fd9"]]},{"id":"60e26730.7f8d38","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"1","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":280,"wires":[["19527767.b23fd9"]]},{"id":"19527767.b23fd9","type":"DO","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":370,"y":240,"wires":[]}]
 
 Digital In
@@ -415,7 +418,10 @@ Input status can be passed to a another block or viewed on the debug window.
 - Output
     - Value of the pin as 1 or 0 in the following format and the pin number as the topic
 
-Import the already setup blocks below to try out the function of the Digital In block:::
+Import the already setup blocks below to try out the function of the Digital In block:
+
+.. code-block:: javascript
+
     [{"id":"4ec6888d.f14568","type":"DI","z":"8e70cb96.beec38","name":"","epId":"","pin":"34","method":0,"x":280,"y":240,"wires":[["44b3d23d.fd52fc"]]},{"id":"44b3d23d.fd52fc","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":470,"y":240,"wires":[]},{"id":"dd7e85ae.3a35d8","type":"comment","z":"8e70cb96.beec38","name":"Poll","info":"","x":270,"y":200,"wires":[]},{"id":"9e09420f.eaa95","type":"comment","z":"8e70cb96.beec38","name":"Interrupt ","info":"","x":280,"y":320,"wires":[]},{"id":"7cfd827f.97cafc","type":"DI","z":"8e70cb96.beec38","name":"","epId":"","pin":"35","method":"1","x":280,"y":360,"wires":[["7770f92b.911f78"]]},{"id":"7770f92b.911f78","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":480,"y":360,"wires":[]},{"id":"f62ae0a.d03e52","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"5","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":240,"wires":[["4ec6888d.f14568"]]}]
 
 Analog Out
@@ -431,7 +437,10 @@ This block used to set PWM to pins of Magicbit. Value should be in range of 0-25
 - Input
     - Inject block or any block. Input value should be in range of 0-255
 
-Import the already setup blocks below to try out the function of the Analog Out block:::
+Import the already setup blocks below to try out the function of the Analog Out block:
+
+.. code-block:: javascript
+
     [{"id":"90c1c4fb.315c28","type":"inject","z":"8e70cb96.beec38","name":"","topic":"100","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":300,"wires":[["35d83292.14be1e"]]},{"id":"35d83292.14be1e","type":"AO","z":"8e70cb96.beec38","name":"","epId":"","pin":"16","x":300,"y":300,"wires":[]}]
 
 Analog In
@@ -456,7 +465,10 @@ This block will read analog value of the ADC pin of the module. Similar to the d
 - Output
     - Value of the pin from 0 to 4096 (12bit ADC)  {"payload": 965}
 
-Import the already setup blocks below to try out the function of the Analog In block:::
+Import the already setup blocks below to try out the function of the Analog In block:
+
+.. code-block:: javascript
+
     [{"id":"90c1c4fb.315c28","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"5","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["71f043eb.d5922c"]]},{"id":"ba86530.51c62b","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":490,"y":300,"wires":[]},{"id":"27777b37.50fcb4","type":"comment","z":"8e70cb96.beec38","name":"Poll","info":"","x":290,"y":260,"wires":[]},{"id":"1e99e73b.121039","type":"comment","z":"8e70cb96.beec38","name":"Interrupt ","info":"","x":300,"y":380,"wires":[]},{"id":"1276b371.20bdad","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":500,"y":420,"wires":[]},{"id":"71f043eb.d5922c","type":"AI","z":"8e70cb96.beec38","name":"","epId":"","pin":"","method":0,"threshold":100,"x":300,"y":300,"wires":[["ba86530.51c62b"]]},{"id":"4752d44e.ecb9ec","type":"AI","z":"8e70cb96.beec38","name":"","epId":"","pin":"","method":"1","threshold":100,"x":300,"y":420,"wires":[["1276b371.20bdad"]]}]
 
 Servo
@@ -481,7 +493,7 @@ Import the already setup blocks below to try out the function of the Servo block
 
     [{"id":"a3277135.4860a","type":"inject","z":"8e70cb96.beec38","name":"","topic":"0","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":240,"wires":[["c4fae3be.28a7b"]]},{"id":"88f7fa5e.ca4808","type":"inject","z":"8e70cb96.beec38","name":"","topic":"90","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["c4fae3be.28a7b"]]},{"id":"e7bdb8d7.7f3a98","type":"inject","z":"8e70cb96.beec38","name":"","topic":"180","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":360,"wires":[["c4fae3be.28a7b"]]},{"id":"c4fae3be.28a7b","type":"Servo","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":350,"y":300,"wires":[]}]
 
-- Connection 
+- Connection
   
     - Magicbit 
     .. image:: Images/servo_connect_magicbit.jpg
@@ -510,7 +522,10 @@ This block will take a text input and display it on the Magicbit's OLED display.
 - Input
     - String 
 
-Import the already setup blocks below to try out the function of the Display block:::
+Import the already setup blocks below to try out the function of the Display block:
+
+.. code-block:: javascript
+
     [{"id":"1f2691d0.3098ee","type":"inject","z":"8e70cb96.beec38","name":"","topic":"Hello Magicbit","payload":"","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":180,"y":280,"wires":[["a88bce4d.e7d84"]]},{"id":"a88bce4d.e7d84","type":"OLED","z":"8e70cb96.beec38","name":"","epId":"","fontSize":"1","x":400,"y":280,"wires":[]}]
 
 - Connection for Generic ESP32
@@ -533,7 +548,10 @@ This block will take an input pulse and play a tone for a preset amount of time.
 - Input
     - Any input trigger pulse 
 
-Import the already setup blocks below to try out the function of the Buzzer block:::
+Import the already setup blocks below to try out the function of the Buzzer block:
+
+.. code-block:: javascript
+
     [{"id":"ff346570.167dc8","type":"BUZZ","z":"8e70cb96.beec38","name":"","epId":"","frequency":1000,"duration":"500","x":460,"y":300,"wires":[]},{"id":"eb281e99.c1c23","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":250,"y":300,"wires":[["ff346570.167dc8"]]}]
 
 - Connection for Generic ESP32
@@ -554,7 +572,10 @@ This block will take an input value for msg.payload which is between -100 and 10
 - Input
     - Integer between -100 and 100 for msg.payload
 
-Import the already setup blocks below to try out the function of the Motor block:::
+Import the already setup blocks below to try out the function of the Motor block:
+
+.. code-block:: javascript
+
     [{"id":"c01c0ecb.99d91","type":"inject","z":"8e70cb96.beec38","name":"","topic":"-100","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":260,"wires":[["a56f3710.8d4f88"]]},{"id":"4a2621f.68e6be","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"0","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":320,"wires":[["a56f3710.8d4f88"]]},{"id":"c36dde0f.e4332","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"100","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":380,"wires":[["a56f3710.8d4f88"]]},{"id":"a56f3710.8d4f88","type":"M","z":"8e70cb96.beec38","name":"","epId":"","motor":"1","x":370,"y":320,"wires":[]}]
 
 - Connection 
@@ -586,7 +607,10 @@ The DHT11 node can be used to output the temperature and the humidity of the sur
     - If both temperature and humidity option is chosen in Mode: msg.payload.temperature will give temperature in celsius, and msg.payload.humidity will give relative humidity as a percentage. 
     - If either temperature or humidity is selected in mode, msg.payload will directly give temperature in celsius or relative humidity as a percentage respectively. 
 
-Import the already setup blocks below to try out the function of the DHT11 block:::
+Import the already setup blocks below to try out the function of the DHT11 block:
+
+.. code-block:: javascript
+
     [{"id":"61142508.ed114c","type":"DHT","z":"8e70cb96.beec38","name":"","epId":"id3359-1674810450279","pin":"32","mode":"TH","x":310,"y":260,"wires":[["6a681143.6d77c","340140d5.c74bb"]]},{"id":"7ca6bc4e.b616d4","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"5","crontab":"","once":false,"onceDelay":0.1,"x":140,"y":260,"wires":[["61142508.ed114c"]]},{"id":"6a681143.6d77c","type":"template","z":"8e70cb96.beec38","name":"","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"Temprature = {{payload.temperature}} °C","output":"str","x":480,"y":220,"wires":[["1b586b40.db1c45"]]},{"id":"1b586b40.db1c45","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":670,"y":220,"wires":[]},{"id":"340140d5.c74bb","type":"template","z":"8e70cb96.beec38","name":"","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"Relative Humidity = {{payload.humidity}} %","output":"str","x":480,"y":300,"wires":[["68dd224e.68e4dc"]]},{"id":"68dd224e.68e4dc","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":670,"y":300,"wires":[]}]
 
 
@@ -614,7 +638,10 @@ This block will take an array of input with RGB values, to control a series of N
 - Input
     - For n number of LEDs, input msg.payload as a JSON object in the form [[R1,G1,B1],[R2,G2,B2].....[Rn,Gn,Bn]] Where R,G,B (between 0 to 255) values are the intensities of Red, Green and Blue colors respectively. 
 
-Import the already setup blocks below to try out the function of the NeoPixel block:::
+Import the already setup blocks below to try out the function of the NeoPixel block:
+
+.. code-block:: javascript
+
     [{"id":"57f95cdb.67e0a4","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"[[255,255,255]]","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":180,"y":200,"wires":[["401a45d9.19fefc"]]},{"id":"401a45d9.19fefc","type":"LED","z":"8e70cb96.beec38","name":"","epId":"id3359-1674810450279","pin":"26","x":440,"y":200,"wires":[]}]
     
 - Connection 
@@ -632,25 +659,28 @@ Ultrasonic
 
 This block will output the distance to an obstacle in centimeters when an input trigger pulse is given.
 
-    - Configuration:
-        - Name: Any name desired
-        - Device ID: Select device from the drop-down menu 
+- Configuration:
+    - Name: Any name desired
+    - Device ID: Select device from the drop-down menu 
 
-    - Input
-        - Any input trigger pulse
+- Input
+    - Any input trigger pulse
 
-    - Output
-        - Integer distance to an obstacle in centimeters
+- Output
+    - Integer distance to an obstacle in centimeters
 
-    - Connection 
+- Connection 
 
-        - Magicbit
-        .. image:: Images/ultrasonic_connect_magicbit.jpg
+  - Magicbit
+  .. image:: Images/ultrasonic_connect_magicbit.jpg
 
-        - Generic ESP32
-        .. image:: Images/ultrasonic_connect_esp32.jpg
+  - Generic ESP32
+  .. image:: Images/ultrasonic_connect_esp32.jpg
 
-Import the already setup blocks below to try out the function of the Ultrasonic block:::
+Import the already setup blocks below to try out the function of the Ultrasonic block:
+
+.. code-block:: javascript
+
     [{"id":"d41059f6.2cb2f8","type":"OLED","z":"8e70cb96.beec38","name":"","epId":"","fontSize":"3","x":540,"y":260,"wires":[]},{"id":"f39d71c7.ce169","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":260,"wires":[["807996ca.371c98"]]},{"id":"807996ca.371c98","type":"US","z":"8e70cb96.beec38","name":"","epId":"","x":320,"y":260,"wires":[["d41059f6.2cb2f8"]]}]
 
 IR Read
@@ -679,7 +709,10 @@ This block will read IR signal using when triggered and save it locally in the  
   - Generic ESP32
   .. image:: Images/ir_read_connect_esp32.jpg
 
-Import the already setup blocks below to try out the function of the IR Read block:::
+Import the already setup blocks below to try out the function of the IR Read block:
+
+.. code-block:: javascript
+
     [{"id":"eb367cd3.cfece","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":150,"y":300,"wires":[["165974e1.48f67b"]]},{"id":"165974e1.48f67b","type":"IR_IN","z":"8e70cb96.beec38","name":"","epId":"","pin":"32","bank":1,"x":320,"y":300,"wires":[["c7413bd9.7d5f98"]]},{"id":"c7413bd9.7d5f98","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":510,"y":300,"wires":[]}]
 
 IR Send
@@ -698,7 +731,10 @@ This block will transmit IR signal when triggered using the IR transmitter. Two 
 - Input
     - Any input trigger pulse
 
-Import the already setup blocks below to try out the function of the IR Read block:::
+Import the already setup blocks below to try out the function of the IR Read block:
+
+.. code-block:: javascript
+
     [{"id":"eb367cd3.cfece","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":140,"y":300,"wires":[["8c0585cf.a31628"]]},{"id":"8c0585cf.a31628","type":"IR_OUT","z":"8e70cb96.beec38","name":"","epId":"","pin":"33","bank":1,"x":340,"y":300,"wires":[]}]
 
 - Connection 
