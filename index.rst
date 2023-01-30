@@ -1,22 +1,5 @@
 
-* This is a bulleted list.
-* It has two items, the second
-  item uses two lines.
-
-1. This is a numbered list.
-2. It has two items too.
-
-#. This is a numbered list.
-#. It has two items too.
-
-* this is
-* a list
-
-  * with a nested list
-  * and some subitems
-
-* and here the parent list continues
-    
+ 
 *****************************************************
 What is Internet of Things
 *****************************************************
@@ -703,6 +686,7 @@ This block will read IR signal using when triggered and save it locally in the  
     - When an IR command is saved, the node will output msg.payload as { ir_recv: 1 , ir_bank: 2 }
 
 - Connection 
+  
   - Magicbit
   .. image:: Images/ir_read_connect_magicbit.jpg
 
@@ -738,12 +722,14 @@ Import the already setup blocks below to try out the function of the IR Read blo
     [{"id":"eb367cd3.cfece","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":140,"y":300,"wires":[["8c0585cf.a31628"]]},{"id":"8c0585cf.a31628","type":"IR_OUT","z":"8e70cb96.beec38","name":"","epId":"","pin":"33","bank":1,"x":340,"y":300,"wires":[]}]
 
 - Connection 
+  
   - Magicbit
   .. image:: Images/ir_send_connect_magicbit.jpg
 
   - Generic ESP32
   .. image:: Images/ir_send_connect_esp32.jpg
-    The transmission range can be improved by connecting the IR emitter through a transistor. 
+
+The transmission range can be improved by connecting the IR emitter through a transistor. 
 
 *************************
 Playground 
@@ -766,33 +752,18 @@ The workspace has a row of tabs along the top; one for each flow and any subflow
 
 Flow
 ====
+
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-flow-tabs.png?raw=true
 
 
 Adding a flow
 -------------
 
-To add a new flow, click the 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/plus.png?raw=true
+.. |plus_icon| image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/plus.png?raw=true
+    :width: 12px
 
-button in the top bar.
+To add a new flow, click the  |plus_icon|  button in the top bar.
 
-Editing flow properties
------------------------
-
-To edit a flow’s properties, double-click on its tab in the top bar. This will open the Flow Properties dialog.
-
-Within the dialog, the flow’s name and description can be set. The description can use Markdown syntax for formatting and will appear in the Information sidebar.
-
-The Status property can be used to disable or enable the flow.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-flow.png?raw=true
-
-
-Deleting a flow
----------------
-
-To delete a flow, click the ‘Delete’ button in the Flow Properties dialog.
 
 Nodes
 ======
@@ -826,39 +797,9 @@ Editing node configuration
 A node’s configuration can be edited by double clicking on the node, or pressing **Enter** when the workspace has focus. If multiple nodes are selected, the _first_ node in the selection will be edited.
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node.png?raw=true
-
- 
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node-settings.png?raw=true
-
+    :width: 600px
 
 The node edit dialog has two separate sections; properties and settings. The properties section shows the edit form specific to the node type being edited. The settings section shows the common settings that can be set on all nodes. This includes the custom port labels as well as the icon for the node.
-
-Clicking on the icon shows the Node icon picker that can be used to select the icon for the node from the list of all available icons.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node-settings-icon.png?raw=true
-
-
-Configuration nodes
--------------------
-
-A Configuration (config) Node is a special type of node that holds reusable configuration that can be shared by regular nodes in a flow.
-
-For example, the MQTT In and Out nodes use an MQTT Broker config node to represent a shared connection to an MQTT broker.
-
-Configuration nodes are added through the edit dialog of a node that requires the config node. It will have a field to select from the available config nodes of the required type or to add a new instance.
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-node-config-node.png?raw=true
-
-
-Clicking the button next to the select box will open the edit dialog for the selected node, or add a new instance.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-edit-config-node.png?raw=true
-
-
-The config node edit dialog only has the node properties section - as a config node has no icon or ports to set labels on.
-
-In the footer of the dialog is an indication of how many nodes use this config node. It also provides a select box to set the scope of the config node. The scope determines which flows the config node is available on. By default it is available on all flows, but the select box can be used to make it local to just one flow.
-
-The Configuration Nodes Sidebar can be used to manage all config nodes.
 
 Wires
 =====
@@ -870,36 +811,6 @@ Nodes are wired together by pressing the left-mouse button on a node’s port, d
 Alternatively, if the **Ctrl/Command** key is held down, the left-mouse button can be clicked (and released) on a node’s port and then clicked on the destination. If the **Ctrl/Command** key remains held and the just-wired destination node has an output port, a new wire is started from that port. This allows a set of nodes to be quickly wired together.
 
 This can also be combined with the Quick-Add dialog that is triggered by a **Ctrl/Command-Click** on the workspace to quickly insert new nodes and have them already wired to previous nodes in the flow.
-
-Splitting wires
----------------
-
-If a node with both an input and output port is dragged over the mid-point of a wire, the wire is draw with a dash. If the node is then dropped, it is automatically inserted into the flow at that point.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/editor-wiring-splice.png?raw=true
-
-
-Moving wires
-------------
-
-To disconnect a wire from a port, select the wire by clicking on it, then press and hold the **Shift** key when the left-mouse button is pressed on the port. When the mouse is then dragged, the wire disconnects from the port and can be dropped on another port. If the mouse button is released over the workspace, the wire is deleted.
-
-If a port has multiple wires connected to it, if none of them is selected when button is pressed with the **Shift** key held, all of the wires will move.
-
-Deleting wires
---------------
-
-To delete a wire, first select it by clicking on it and then press the **delete** key.
-
-Selection
-=========
-A node is selected when it is clicked on. This will deselect anything currently selected. The Information Sidebar will update to show the node’s properties and help text for its type.
-
-If the **Ctrl** or **Command** key is held when clicking on the node, the node will be added to the current selection (or removed if it was already selected).
-
-If the **Shift** key is held when clicking on the node, it will select that node and all other nodes it is connected to.
-
-A wire is selected when it is clicked on. Unlike nodes, it is only possible to select one wire at a time.
 
 Lasso Tool
 ----------
@@ -947,6 +858,7 @@ It can export either the selected nodes, the current flow (including its tab nod
 It offers the option to export compact or formatted JSON. The compact option generates a single line of JSON with no whitespace. The formatted JSON option is formatted over multiple lines with full indentation - which can be easier to read.
 
 .. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-export.png?raw=true
+
 **********
 Dashboards
 **********
@@ -996,28 +908,6 @@ To create a tab and a group follow the following instructions (see figure below)
 
 - You can edit its name, select its corresponding tab and change its width.
 
-Dashboard Theme
-==============================
-
-The **Magicblocks** Dashboard has a white background and a light blue bar by default. You can edit its colors in the Theme tab on the up right corner as show in the following figure.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/theme-properties.png?raw=true
-
-
-- Change the style, deploy the changes and see the Dashboard UI changing its colors. For example, like in the following figure
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/Dashboard.PNG?raw=true
-
-
-Dashboard Site
-==============================
-
-At the right upper corner of the **Magicblocks** window, you have another tab called Site that allows you to do further customization as show in the figure below.
-
-.. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/site-properties.png?raw=true
-
-
-Feel free to change the settings, then deploy the changes and see how the UI looks. At the moment you won’t see much difference because you haven’t added anything to the dashboard yet. Those changes will be noticeable when you start adding widgets to the UI.
 
 Creating a User Interface – Example
 ===================================
