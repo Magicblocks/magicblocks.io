@@ -85,7 +85,7 @@ Getting Started
 
 .. image:: Images/Setup.png
 
-`Watch Video <https://www.youtube.com/watch?v=p4vSKwN1cfI>`_
+`Watch Video <https://youtu.be/y6r6UqaOZxs>`_
 
 
 Create Magicblocks.io Account
