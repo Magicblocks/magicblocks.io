@@ -84,8 +84,9 @@ Getting Started
 
 .. raw:: html
 
- <iframe width="560" height="315" src="https://www.youtube.com/embed/y6r6UqaOZxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ <iframe height="100%" width="100%" src="https://www.youtube.com/embed/y6r6UqaOZxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  
+
 
 Create Magicblocks.io Account
 ===========================================
@@ -420,7 +421,7 @@ It can export either the selected nodes, the current flow (including its tab nod
 It offers the option to export compact or formatted JSON. The compact option generates a single line of JSON with no whitespace. The formatted JSON option is formatted over multiple lines with full indentation - which can be easier to read.
 
 .. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-export.png?raw=true
-
+    :width: 400px
 
 ***********************
 Magicbit Blocks
@@ -576,7 +577,7 @@ Import the already setup blocks below to try out the function of the Servo block
 
 
 Display
-================
+=========
 
 .. image:: Images/display-magicblocks.jpg
 
