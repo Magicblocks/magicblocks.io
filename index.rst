@@ -1,5 +1,5 @@
 
- 
+
 *****************************************************
 What is Internet of Things
 *****************************************************
@@ -82,11 +82,10 @@ M5Stack is a line of modular, stackable, and portable development boards based o
 Getting Started
 ***************
 
+.. raw:: html
 
-.. image:: Images/Setup.png
-
-`Watch Video <https://youtu.be/y6r6UqaOZxs>`_
-
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/y6r6UqaOZxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ 
 
 Create Magicblocks.io Account
 ===========================================
@@ -196,11 +195,11 @@ To set up your device, follow the relevant steps for your device given below.
 
         click on the setting icon on device manager of your device.
 
-        .. image:: Images/magicblocks-device-setup-ESP32.jpg
+        .. image:: Images/magicblocks-device-setup-esp32.jpg
 
         Select your device and follow instructions to load magicblocks.io firmware.
 
-        .. image:: Images/select-device-ESP32.jpg
+        .. image:: Images/select-device-esp32.jpg
 
         On next window enter your internet router WiFi network name (SSID) and password
 
