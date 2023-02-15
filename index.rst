@@ -211,6 +211,87 @@ To set up your device, follow the relevant steps for your device given below.
         .. image:: Images/configure-wifi-ESP32.jpg
 
 
+
+***********************
+Your first IoT project
+***********************
+
+Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
+
+.. tabs::
+
+    .. tab:: Magicbit
+
+        Let’s start magic with displaying a text on Magicbit display.
+
+        - Open the Device Manager in your magicblocks account
+        - Plug in your Magicbit that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
+            .. image:: Images/frist_iot_magicbit_1.jpg      
+
+        - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
+        - Double click on the Display block and Select the device Id
+            .. image:: Images/frist_iot_magicbit_2.jpg
+
+        - Click deploy
+        - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
+
+        
+    .. tab:: MagicKey
+
+        Let’s start magic with displaying a text on Magicbit display.
+
+        - Open the Device Manager in your magicblocks account
+        - Plug in your MagicKey that was setup in the previous section and wait for it to connect
+        - Open the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
+
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2.jpg  
+
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
+
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
+
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+  
+
+    .. tab:: Generic ESP32
+
+        Open the Device Manager in your magicblocks account
+
+        - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
+        - Goto the playground
+        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
+        .. image:: Images/frist_iot_LED_1.jpg        
+
+        - Double click on the **Digital Out** block and select device ID
+        - Set LED connected pin (Pin 16 in MagicKey)
+        .. image:: Images/frist_iot_LED_2_esp32.jpg  
+
+        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
+        .. image:: Images/frist_iot_LED_3.jpg
+
+        - In one **inject** node set payload type as Number and set value to 0
+        - In Other **inject** node set payload type as Number and set value to 1 
+        .. image:: Images/frist_iot_LED_4.jpg
+
+        - Click deploy
+        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
+
+
+If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
+
+
+
+
 *************************
 Playground 
 *************************
@@ -249,7 +330,7 @@ Flow
 
 
 Adding a flow
--------------
+================
 
 .. |plus_icon| image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/plus.png?raw=true
     :width: 12px
@@ -319,7 +400,7 @@ Import & Export
 Flows can be imported and exported from the editor using their JSON format, making it very easy to share flows with others.
 
 Importing flows
----------------
+================
 
 To import a flow, open the Import dialog, paste in the flow json and click ‘Import’.
 
@@ -331,7 +412,7 @@ The dialog also offers the option to import the nodes into the current flow, or 
 
 
 Exporting flows
----------------
+================
 
 The Export dialog can be used to copy flow json out of the editor.
 
@@ -342,9 +423,9 @@ It offers the option to export compact or formatted JSON. The compact option gen
 .. image:: https://github.com/Magicblocks/magicblocks.io/blob/master/Images/editor-export.png?raw=true
 
 
-===============
+***********************
 Magicbit Blocks
-===============
+***********************
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/magicbitNodes.PNG?raw=true
 
@@ -369,7 +450,7 @@ Magicbit Blocks
 This block set enables you to control individual pins of the device from the playground. The functionality of each block is described below:
 
 Digital Out
-------------
+================
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/digitalOut.PNG?raw=true
 
@@ -388,7 +469,7 @@ Import the already setup blocks below to try out the function of the Digital Out
     [{"id":"2a06e0c8.00d53","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"0","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":200,"wires":[["19527767.b23fd9"]]},{"id":"60e26730.7f8d38","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"1","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":170,"y":280,"wires":[["19527767.b23fd9"]]},{"id":"19527767.b23fd9","type":"DO","z":"8e70cb96.beec38","name":"","epId":"","pin":"","x":370,"y":240,"wires":[]}]
 
 Digital In
-----------
+================
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/digitalIn.PNG?raw=true
 
 
@@ -414,7 +495,7 @@ Import the already setup blocks below to try out the function of the Digital In 
     [{"id":"4ec6888d.f14568","type":"DI","z":"8e70cb96.beec38","name":"","epId":"","pin":"34","method":0,"x":280,"y":240,"wires":[["44b3d23d.fd52fc"]]},{"id":"44b3d23d.fd52fc","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":470,"y":240,"wires":[]},{"id":"dd7e85ae.3a35d8","type":"comment","z":"8e70cb96.beec38","name":"Poll","info":"","x":270,"y":200,"wires":[]},{"id":"9e09420f.eaa95","type":"comment","z":"8e70cb96.beec38","name":"Interrupt ","info":"","x":280,"y":320,"wires":[]},{"id":"7cfd827f.97cafc","type":"DI","z":"8e70cb96.beec38","name":"","epId":"","pin":"35","method":"1","x":280,"y":360,"wires":[["7770f92b.911f78"]]},{"id":"7770f92b.911f78","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":480,"y":360,"wires":[]},{"id":"f62ae0a.d03e52","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"5","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":240,"wires":[["4ec6888d.f14568"]]}]
 
 Analog Out
-----------
+================
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/analogOut.PNG?raw=true
 
 This block used to set PWM to pins of Magicbit. Value should be in range of 0-255. Inject block or output of a another block can be used to set the value.
@@ -433,7 +514,7 @@ Import the already setup blocks below to try out the function of the Analog Out 
     [{"id":"90c1c4fb.315c28","type":"inject","z":"8e70cb96.beec38","name":"","topic":"100","payload":"","payloadType":"num","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":300,"wires":[["35d83292.14be1e"]]},{"id":"35d83292.14be1e","type":"AO","z":"8e70cb96.beec38","name":"","epId":"","pin":"16","x":300,"y":300,"wires":[]}]
 
 Analog In
----------
+================
 
 .. image:: https://github.com/magicbitlk/Magicbit-Magicblocks.io/blob/master/Images/analogIn.PNG?raw=true
 
@@ -461,7 +542,7 @@ Import the already setup blocks below to try out the function of the Analog In b
     [{"id":"90c1c4fb.315c28","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"5","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":300,"wires":[["71f043eb.d5922c"]]},{"id":"ba86530.51c62b","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":490,"y":300,"wires":[]},{"id":"27777b37.50fcb4","type":"comment","z":"8e70cb96.beec38","name":"Poll","info":"","x":290,"y":260,"wires":[]},{"id":"1e99e73b.121039","type":"comment","z":"8e70cb96.beec38","name":"Interrupt ","info":"","x":300,"y":380,"wires":[]},{"id":"1276b371.20bdad","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":500,"y":420,"wires":[]},{"id":"71f043eb.d5922c","type":"AI","z":"8e70cb96.beec38","name":"","epId":"","pin":"","method":0,"threshold":100,"x":300,"y":300,"wires":[["ba86530.51c62b"]]},{"id":"4752d44e.ecb9ec","type":"AI","z":"8e70cb96.beec38","name":"","epId":"","pin":"","method":"1","threshold":100,"x":300,"y":420,"wires":[["1276b371.20bdad"]]}]
 
 Servo
----------
+================
 
 .. image:: Images/servo_magicblocks.png
 
@@ -496,7 +577,7 @@ Import the already setup blocks below to try out the function of the Servo block
 
 
 Display
----------
+================
 
 .. image:: Images/display-magicblocks.jpg
 
@@ -547,7 +628,7 @@ Import the already setup blocks below to try out the function of the Buzzer bloc
 .. image:: Images/buzzer_connect_esp32.jpg
 
 Motor
----------
+================
 
 .. image:: Images/motor-magicblocks.jpg
 
@@ -577,7 +658,7 @@ Import the already setup blocks below to try out the function of the Motor block
 
 
 DHT11
----------
+================
 
 .. image:: Images/dht11-magicblocks.jpg
 
@@ -613,7 +694,7 @@ Import the already setup blocks below to try out the function of the DHT11 block
 
 
 NeoPixel
----------
+================
 
 .. image:: Images/neopixel-magicblocks.jpg
 
@@ -642,7 +723,7 @@ Import the already setup blocks below to try out the function of the NeoPixel bl
   .. image:: Images/neopixel_connect_esp32.jpg
 
 Ultrasonic
-------------
+================
 
 .. image:: Images/ultrasonic-magicblocks.jpg
 
@@ -673,7 +754,7 @@ Import the already setup blocks below to try out the function of the Ultrasonic 
     [{"id":"d41059f6.2cb2f8","type":"OLED","z":"8e70cb96.beec38","name":"","epId":"","fontSize":"3","x":540,"y":260,"wires":[]},{"id":"f39d71c7.ce169","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":110,"y":260,"wires":[["807996ca.371c98"]]},{"id":"807996ca.371c98","type":"US","z":"8e70cb96.beec38","name":"","epId":"","x":320,"y":260,"wires":[["d41059f6.2cb2f8"]]}]
 
 IR Read
-------------
+================
 
 .. image:: Images/ir-read-magicblocks.jpg
 
@@ -706,7 +787,7 @@ Import the already setup blocks below to try out the function of the IR Read blo
     [{"id":"eb367cd3.cfece","type":"inject","z":"8e70cb96.beec38","name":"","topic":"","payload":"","payloadType":"date","repeat":"1","crontab":"","once":false,"onceDelay":0.1,"x":150,"y":300,"wires":[["165974e1.48f67b"]]},{"id":"165974e1.48f67b","type":"IR_IN","z":"8e70cb96.beec38","name":"","epId":"","pin":"32","bank":1,"x":320,"y":300,"wires":[["c7413bd9.7d5f98"]]},{"id":"c7413bd9.7d5f98","type":"debug","z":"8e70cb96.beec38","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":510,"y":300,"wires":[]}]
 
 IR Send
-------------
+================
 
 .. image:: Images/ir-send-magicblocks.jpg
 
@@ -828,87 +909,6 @@ There are four types of rule:
 - A JSONata **Expression** can be provided that will be evaluated against the whole message and will match if the expression returns a _true_ value.
 - An **Otherwise** rule can be used to match if none of the preceding rules have matched.
 The node will route a message to all outputs corresponding to matching rules. But it can also be configured to stop evaluating rules when it finds one that matches.
-
-
-
-***********************
-Your first IoT project
-***********************
-
-Let's start magic with by controlling your device over the internet! Select your device and follow the instructions below to build your first IoT project with Magicblocks.
-
-.. tabs::
-
-    .. tab:: Magicbit
-
-        Let’s start magic with displaying a text on Magicbit display.
-
-        - Open the Device Manager in your magicblocks account
-        - Plug in your Magicbit that was setup in the previous section and wait for it to connect
-        - Open the playground
-        - Drag and drop a Display block from under the category Magicbit, and an inject block under the input category and connect them.    
-            .. image:: Images/frist_iot_magicbit_1.jpg      
-
-        - Double click on the inject node set payload type as String and type "Hello Magicbit" in the text box. You can set a topic too.
-        - Double click on the Display block and Select the device Id
-            .. image:: Images/frist_iot_magicbit_2.jpg
-
-        - Click deploy
-        - Click button in Inject node to see the magic. You can set any text from any where in the world!!!
-
-        
-    .. tab:: MagicKey
-
-        Let’s start magic with displaying a text on Magicbit display.
-
-        - Open the Device Manager in your magicblocks account
-        - Plug in your MagicKey that was setup in the previous section and wait for it to connect
-        - Open the playground
-        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-        .. image:: Images/frist_iot_LED_1.jpg        
-
-        - Double click on the **Digital Out** block and select device ID
-        - Set LED connected pin (Pin 16 in MagicKey)
-        .. image:: Images/frist_iot_LED_2.jpg  
-
-        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-        .. image:: Images/frist_iot_LED_3.jpg
-
-        - In one **inject** node set payload type as Number and set value to 0
-        - In Other **inject** node set payload type as Number and set value to 1 
-        .. image:: Images/frist_iot_LED_4.jpg
-
-        - Click deploy
-        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
-  
-
-    .. tab:: Generic ESP32
-
-        Open the Device Manager in your magicblocks account
-
-        - Turn on your ESP32 board that was setup in the previous section and wait for it to connect
-        - Goto the playground
-        - Drag and drop the **Digital Out** block under the category **Magicbit/ESP32**
-        .. image:: Images/frist_iot_LED_1.jpg        
-
-        - Double click on the **Digital Out** block and select device ID
-        - Set LED connected pin (Pin 16 in MagicKey)
-        .. image:: Images/frist_iot_LED_2_esp32.jpg  
-
-        - Drag and drop two **inject** blocks under the **input** category and connect them to the **Digital Out** block
-        .. image:: Images/frist_iot_LED_3.jpg
-
-        - In one **inject** node set payload type as Number and set value to 0
-        - In Other **inject** node set payload type as Number and set value to 1 
-        .. image:: Images/frist_iot_LED_4.jpg
-
-        - Click deploy
-        - Click button in Inject nodes to see the magic. You can control this LED from any where in the world!!!
-
-
-If you are not familiar with Magicblocks or Nodered you can quickly learn essential features from here. `https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground <https://magicbit-magicblocksio.readthedocs.io/en/latest/#playground>`_
-
-
 
 
 **********
